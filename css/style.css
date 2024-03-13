@@ -1,0 +1,9 @@
+#results {
+  border: 1px solid #333;
+  height: 20rem;
+  overflow: auto;
+}
+
+#buttons {
+  display: inline-block;
+}

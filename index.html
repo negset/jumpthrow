@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Valorant Jump Throw Trainer</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div>
+      <p>Attempts: <span id="anl-attempts">0</span></p>
+      <p>Success rate: <span id="anl-success-rate">NaN</span> %</p>
+      <p>Wrong input first: <span id="anl-wrong-input-first">NaN</span> %</p>
+      <p>Throw too late: <span id="anl-throw-too-late">NaN</span> %</p>
+      <p>Average delta: <span id="anl-average-delta">NaN</span> ms</p>
+    </div>
+    <div id="buttons">
+      <button id="reset">reset</button>
+      <button id="key-config">key config</button>
+    </div>
+    <div id="results"></div>
+    <dialog id="cnf-dialog">
+      <p>Jump: <span id="cnf-jump"></span></p>
+      <p>Throw: <span id="cnf-throw"></span></p>
+      <button id="cnf-save">save</button>
+      <button id="cnf-cancel">cancel</button>
+    </dialog>
+    <script src="js/script.js"></script>
+  </body>
+</html>
