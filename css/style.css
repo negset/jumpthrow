@@ -1,9 +1,148 @@
-#results {
-  border: 1px solid #333;
-  height: 20rem;
-  overflow: auto;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css");
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #ccc;
+  background: #202024;
+}
+
+header,
+main,
+footer {
+  max-width: 800px;
+  margin: auto;
+}
+
+footer span + span {
+  margin-left: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 2rem 0 1rem 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  background: #ff4655;
+  font: inherit;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  & + & {
+    margin-left: 2rem;
+  }
+  &:hover {
+    background: #111;
+  }
+  &:disabled {
+    background: #666;
+    color: inherit;
+  }
+}
+
+#analytics {
+  margin: 2rem 0;
+  border-spacing: 0;
+  th {
+    text-align: left;
+    font: inherit;
+    padding-right: 1rem;
+  }
+  tr:not(:first-child) {
+    & > th,
+    & > td {
+      padding-top: .5rem;
+    }
+  }
+  [id^="anl-"] {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
 }
 
 #buttons {
   display: inline-block;
+}
+
+#results {
+  border: 1px solid #555;
+  background: #111;
+  color: #888;
+  height: 12rem;
+  overflow: auto;
+  font-weight: 700;
+  padding: 1rem;
+  margin: 2rem -1rem;
+  div + div {
+    margin-top: 0.3em;
+  }
+  .success {
+    color: #193;
+  }
+  .failure {
+    color: #b22;
+  }
+}
+
+#cnf-dialog {
+  width: 440px;
+  color: inherit;
+  background: inherit;
+  border: 1px solid #555;
+  padding: 2rem 2rem;
+  table {
+    border-spacing: 0;
+  }
+  th {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: left;
+    tr:not(:first-child) > & {
+      padding-top: 1.5rem;
+    }
+  }
+  td {
+    padding-top: .5rem;
+    & + & {
+      padding-left: 1rem;
+    }
+  }
+  #cnf-buttons {
+    margin-top: 2rem;
+  }
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.inputting {
+  animation: blink 0.5s ease-in-out infinite alternate;
+  &::before {
+    content: "Press any key or mouse button to bind";
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
